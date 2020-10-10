@@ -36,6 +36,11 @@ NO.4
   pada index.php muncul 3 tombol di atas yang akan membawa user ke CRUD sederhana dari Course, Content,dan Author
   pada index pula ditampilkan course yang tersedia.
   
+- untuk menggunakan aplikasi ini, silahkan import terlebih dahulu file sql kedalam database anda
+- pastikan tidak ada database dg nama coursedb
+- letakkan semua folder di folder XAMPP/namafoldermu
+- 
+
 Sekian penjelasan dari saya, 
 
 Regards,

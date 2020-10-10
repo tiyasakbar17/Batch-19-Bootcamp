@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Nomor 1</title>
+    <style>
+
+        body {
+            background-color: grey;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+        .container {
+            background-color: white;
+            width: 600px;
+            margin: 30px auto;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            
+        }
+        p {
+            text-align: justify;
+        }
+
+        button {
+            width : 180px;
+        }
+        textarea {
+            width : 580px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Soal Nomor 1</h1>
+        <h2 style="text-align: left;">Created By: Muhammad Tiyas Fachreza Akbar</h2>
+        <p> <strong>Buatlah sebuah function</strong> yang bertujuan untuk menghitung harga barang berdasarkan kualitas barangnya, 
+		<strong>dengan parameter kualitas Barang dan quantity</strong>
+        </p>
+        <label><strong>Kualitas Barang</strong></label> <br>
+		<input type="text" name="kualitas" id="kualitas" placeholder="A / B / C"><br><br>
+		<label><strong>Quantity</strong></label> <br>
+		<input type="text" name="jumlah" id="jumlah" placeholder="Jumlah Barang"><br><br>
+		<button onClick="hitungbarang()">Hitung</button>
+        
+        <br><br>
+        <textarea style="font-size: 25px;" name="output" id="output" cols="30" rows="10"></textarea><br>
+    </div>
+</body>
+<script>
+function hitungbarang(){
+
+var kualitas = document.getElementById("kualitas").value;
+var jumlah = document.getElementById("jumlah").value;
+var output = document.getElementById("output");
+if (kualitas == "A"){
+	var harga = 3000;
+    if (jumlah > 10){
+        var discount = 500 * jumlah;}
+	} else if (kualitas == "B"){
+	var harga = 3500;
+    if (jumlah > 5){
+        var discount = 0.5 * (harga * jumlah);}
+	} else if (kualitas == "C"){
+	var harga = 5000;
+    var discount = 0;}
+	else{
+	output.value = ("Masukkan Kualitas Barang Dengan Benar");
+	return;}
+var awal = (harga * jumlah);
+var calculation = (harga * jumlah) - discount;
+output.value = ("Total Harga Barang : "+ awal+ "\nPotongan : "+ discount+ "\nTotal yang harus dibayar : "+ calculation);
+} 
+    
+</script>
+</html>

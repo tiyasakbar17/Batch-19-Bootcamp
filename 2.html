@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Nomor 2</title>
+    <style>
+
+        body {
+            background-color: grey;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+        .container {
+            background-color: white;
+            width: 600px;
+            margin: 30px auto;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            
+        }
+        p {
+            text-align: justify;
+        }
+
+        button {
+            width : 180px;
+        }
+        textarea {
+            width : 580px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Soal Nomor 2</h1>
+        <h2 style="text-align: left;">Created By: Muhammad Tiyas Fachreza Akbar</h2>
+        <p> <strong>Cipto</strong> seaorang programmer handal, ia ditugaskan untuk membuat sebuah fungsi menghitung huruf vokal (a, i, u, e, o), bantulah cipto untuk menyelesaikan tugas tersebut
+        </p>
+        <label><strong>Kata/Kalimat</strong></label> <br>
+		<textarea style="font-size: 25px;" name="input" id="input" cols="30" rows="10"></textarea><br><br>
+		
+		<button onClick="Count_vowels()">Hitung huruf vokal</button><br><br><br><br>
+		<label><strong>Hasil Hitung</strong></label> <br>
+		<textarea style="font-size: 25px;text-align: center;" name="output" id="output" cols="30" rows="3"></textarea><br><br>
+        
+        <br><br>
+        <br>
+    </div>
+</body>
+<script>
+function Count_vowels(){
+
+var kata = document.getElementById("input").value;
+var convert = kata.toLowerCase();
+var output = document.getElementById("output");
+var letter;
+var Count = 0;
+
+for (letter of convert){
+	if (letter == "a"){
+        Count += 1;}
+    else if (letter == "i"){
+        Count += 1;}
+    else if (letter == "u"){
+        Count += 1;}
+    else if (letter == "e"){
+        Count += 1;}
+    else if (letter == "o"){
+        Count += 1;}
+	}
+output.value = (Count);
+} 
+    
+</script>
+</html>

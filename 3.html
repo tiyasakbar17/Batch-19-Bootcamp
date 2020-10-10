@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal Nomor 3</title>
+    <style>
+
+        body {
+            background-color: grey;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+        .container {
+            background-color: white;
+            width: 600px;
+            margin: 30px auto;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            
+        }
+        p {
+            text-align: justify;
+        }
+
+        button {
+            width : 180px;
+        }
+        textarea {
+            width : 580px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Soal Nomor 3</h1>
+        <h2 style="text-align: left;">Created By: Muhammad Tiyas Fachreza Akbar</h2>
+        <p> Buatlah sebuah <strong>function</strong> untuk membentuk sebuah segitiga siku-siku yang terbuat dari angka prima dengan inputan angka diantara 1 sampai 9 sebagai alas dan tingginya
+        </p>
+        <label><strong>Input Angka</strong></label> <br>
+		<input type="text" name="input" id="input" placeholder="1 - 9"><br><br>
+		<button onClick="mulai()">Mulai</button>
+        
+        <br><br>
+        <textarea style="font-size: 25px;" name="output" id="output" cols="30" rows="10"></textarea><br>
+    </div>
+</body>
+<script>
+function prima_checker(check){
+    if (check == 2){
+        return 2;}
+	var i;
+    for (i=check; i < 999; i++){
+		var j;
+        for (j = 2; j < i; j++){
+            if (i%j == 0){
+				var prima=0;
+                break;}
+			else {
+				var prima=1;
+			}
+		}
+if (prima == 1) return i;
+        }
+	}
+	
+function mulai(){
+
+var create = document.getElementById("input").value;
+var output = document.getElementById("output");
+output.value = ("");
+
+if (create < 1 || create > 9){
+    output.value += ("Masukkan Inputan antara 1 - 9");
+	return}
+else{
+  var alas = 1;
+  var y = 2;
+  var z;
+  for (z = 0; z < create; z++){
+	  var x;
+      for (x=0;x < alas; x++){
+          output.value += (prima_checker(y)+" ");
+		  var notes = prima_checker(y);
+          y = notes + 1;}
+      alas++;
+      output.value += ("\n")
+	  }
+}		  
+}
+</script>
+</html>
